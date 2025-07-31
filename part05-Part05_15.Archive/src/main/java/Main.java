@@ -6,7 +6,40 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        ArrayList<Item> items = new ArrayList<>();
+        ArrayList<Integer> uniqueItems = new ArrayList<>();
 
+        while (true) {
+            System.out.println("Identifier? (empty will stop)");
+            String identifier = scanner.nextLine();
+            if (identifier.isEmpty()) {
+                break;
+            }
+            System.out.println("Name? (empty will stop)");
+            String name = scanner.nextLine();
+            if(name.isEmpty()){
+                break;
+            }
+            Item created = new Item(identifier, name);
+            boolean found = false;
+            for(Item a : items){
+                if(a.equals(created)){
+                    found = true;
+                }
+            }
+            items.add(created);
+
+            if(!found){
+                int index = items.indexOf(created);
+                uniqueItems.add(index);
+            }
+
+
+        }
+        System.out.println("==Items==");
+        for (int i : uniqueItems) {
+            System.out.println(items.get(i).toString());
+        }
 
     }
 }

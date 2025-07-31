@@ -1,7 +1,7 @@
 
 public class SimpleDate {
 
-    private int day;
+        private int day;
     private int month;
     private int year;
 
@@ -32,5 +32,30 @@ public class SimpleDate {
 
         return false;
     }
+    public void advance(){
+        this.day++ ;
+        if(this.day>30){
+            this.day = 1;
+            this.month++;
+            if(month>12){
+                this.month = 1;
+                this.year++;
+            }
+        }
+    }
+    public void advance(int howManyDays){
+        for(int i = 0 ; i < howManyDays;i++){
+            advance();
+        }
+    }
+    
+    public SimpleDate afterNumberOfDays(int days) {
+        SimpleDate newDate = new SimpleDate( this.day,this.month, this.year );
+        newDate.advance(days);
+
+    // do something..
+
+    return newDate;
+}
 
 }

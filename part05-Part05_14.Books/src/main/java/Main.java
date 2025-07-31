@@ -14,10 +14,18 @@ public class Main {
             if (name.isEmpty()) {
                 break;
             }
-
+            boolean found = false;
             System.out.println("Publication year:");
             int publicationYear = Integer.valueOf(scanner.nextLine());
             Book book = new Book(name, publicationYear);
+            for(Book a : books){
+                if(a.equals(book)){
+                   found = true ;
+                }
+            }
+            if(found){
+                continue;
+            }
             books.add(book);
 
         }

@@ -16,5 +16,9 @@ public class Pet {
     public String getBreed() {
         return breed;
     }
+    public String toString(){
+        return this.name + this.breed;
+        
+    }
 
 }

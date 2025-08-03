@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class Hold {
     private int maximumWeight;
-    ArrayList<Suitcase> hold ;
+    private ArrayList<Suitcase> hold ;
 
     public Hold(int maximumWeight) {
         this.maximumWeight = maximumWeight;
@@ -39,7 +39,12 @@ public class Hold {
         
         return this.hold.size()+ " suitcases ("+ this.totalWeightHold() + " kg)";
     }
-    
+    public void printItems() {
+        for(Suitcase x : hold){
+            
+            x.printItems();
+        }
+    }
     
     
     

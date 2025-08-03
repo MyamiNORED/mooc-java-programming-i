@@ -9,6 +9,10 @@ public class Program {
         GradeRegister register = new GradeRegister();
 
         UserInterface ui = new UserInterface(register, scanner);
+        System.out.println("program start");
         ui.start();
+         
+       
+
     }
 }

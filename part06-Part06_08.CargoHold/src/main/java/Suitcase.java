@@ -14,7 +14,7 @@ import java.util.ArrayList;
  * @author Myami
  */
 public class Suitcase {
-    ArrayList<Item> suitcase ;
+    private ArrayList<Item> suitcase ;
     private int maximumWeight;
 
     public Suitcase(int maximumWeight) {

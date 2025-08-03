@@ -7,6 +7,14 @@ public class Program {
 
     public static void main(String[] args) {
 
+        // IndexOutOfBoundsException: Index 2 out of bounds for length 2, in call drawJoke().
+        //An error occurred when drawing a joke. Test the code:
+        JokeManager manager = new JokeManager();
+        manager.addJoke("What is red and smells of blue paint? - Red paint.");
+        manager.addJoke("MWhat is blue and smells of red paint? - Blue paint.");
+        System.out.println(manager.drawJoke());
+
+        /*
         Scanner scanner = new Scanner(System.in);
         ArrayList<String> jokes = new ArrayList<>();
         System.out.println("What a joke!");
@@ -40,5 +48,6 @@ public class Program {
         }
         }
         }
+         */
     }
 }

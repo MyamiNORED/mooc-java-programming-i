@@ -9,21 +9,23 @@ public class LiquidContainers {
         Container b = new Container("Second");
 
         while (true) {
-            System.out.print("> ");
 
             String input = scan.nextLine();
             if (input.equals("quit")) {
+                System.out.println(a.toString());
+                System.out.println(b.toString());
                 break;
+            }
+            String[] line = input.split(" ");
+
+            if (line[0].equals("add")) {
+
+                int num = Integer.valueOf(line[1]);
+                a.add(num);
+
             }
             System.out.println(a.toString());
             System.out.println(b.toString());
-            if (input.equals("add")) {
-                System.out.println("add ");
-                int num = Integer.valueOf(scan.nextLine());
-                a.add(num);
-                System.out.println(a.toString());
-                System.out.println(b.toString());
-            }
 
         }
     }

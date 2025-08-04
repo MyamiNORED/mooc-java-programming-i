@@ -18,6 +18,10 @@ public class Container {
     }
     
     public void add (int amount){
+        if(amount < 0){
+            return;
+        }
+        
         int toAdd = this.maxCapacity + amount ;
         if(toAdd > 100){
         
@@ -29,6 +33,7 @@ public class Container {
     }
     
     public void move (int amount,Container B){
+        
         if(amount > maxCapacity){
             this.maxCapacity = 0;
             B.add(amount);

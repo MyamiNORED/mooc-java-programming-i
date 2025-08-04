@@ -27,13 +27,10 @@ public class JokeManager {
         if(size ==0 ){
             return "Jokes are in short supply." ;
         }
-        if(size == 1){
-            return jokes.get(0);
-        }
-         
-         
+       
+         int rand = (int) (Math.random() * 10)%2 ;
         
-        return jokes.get(0);
+        return jokes.get(rand);
         
     }
 

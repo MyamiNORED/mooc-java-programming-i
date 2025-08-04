@@ -6,14 +6,20 @@ import java.util.Scanner;
 public class Program {
 
     public static void main(String[] args) {
+        
+        for(int i = 0 ; i < 10 ; i++ ){
+            System.out.println(  (int) (Math.random() * 10)%2);
+                    }
+        
+        
 
         // IndexOutOfBoundsException: Index 2 out of bounds for length 2, in call drawJoke().
         //An error occurred when drawing a joke. Test the code:
-        JokeManager manager = new JokeManager();
+        /*JokeManager manager = new JokeManager();
         manager.addJoke("What is red and smells of blue paint? - Red paint.");
         manager.addJoke("MWhat is blue and smells of red paint? - Blue paint.");
         System.out.println(manager.drawJoke());
-
+        */
         /*
         Scanner scanner = new Scanner(System.in);
         ArrayList<String> jokes = new ArrayList<>();

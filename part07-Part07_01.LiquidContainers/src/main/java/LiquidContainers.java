@@ -9,11 +9,13 @@ public class LiquidContainers {
         Container b = new Container("Second");
 
         while (true) {
+            System.out.println(a.toString());
+            System.out.println(b.toString());
 
             String input = scan.nextLine();
+
             if (input.equals("quit")) {
-                System.out.println(a.toString());
-                System.out.println(b.toString());
+
                 break;
             }
             String[] line = input.split(" ");
@@ -24,10 +26,10 @@ public class LiquidContainers {
                 a.add(num);
 
             }
-            System.out.println(a.toString());
-            System.out.println(b.toString());
 
         }
+        
+
     }
 
 }
